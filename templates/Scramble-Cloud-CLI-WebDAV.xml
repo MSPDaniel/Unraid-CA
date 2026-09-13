@@ -14,7 +14,6 @@
   <Overview>Runs the official Scramble Cloud CLI and exposes its WebDAV server. The CLI is installed from npm each time the container is created or started. Login/session data is persisted in the mapped appdata directory.</Overview>
   <Category>Cloud: Other: Tools:</Category>
   <WebUI>http://[IP]:[PORT:1900]</WebUI>
-  <TemplateURL/>
   <Icon>https://scramble.cloud/favicon.ico</Icon>
   <ExtraParams>--init</ExtraParams>
   <PostArgs>sh -c 'npm install -g @scramble-cloud/cli &amp;amp;&amp;amp; while true; do scramble-cli webdav --host 0.0.0.0 --port 1900 --username "${SCRAMBLE_WEBDAV_USERNAME:-admin}" ; echo "Scramble WebDAV stopped; retrying in 30 seconds. Use the container Console to run: scramble-cli login -u your@email.com"; sleep 30; done'</PostArgs>
