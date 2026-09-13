@@ -3,6 +3,6 @@
     Unraid Community Applications templates maintained by MSPDaniel
     Support and issue tracking are handled through the GitHub repository.
   </Profile>
-  <Icon>https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME/main/icon.svg</Icon>
+  <Icon>https://raw.githubusercontent.com/MSPDaniel/Unraid-CA/main/icon.svg</Icon>
   <WebPage>https://github.com/MSPDaniel/Unraid-CA</WebPage>
 </CommunityApplications>
