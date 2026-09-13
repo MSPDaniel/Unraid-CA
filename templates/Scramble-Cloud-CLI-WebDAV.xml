@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>Scramble Cloud CLI WebDAV</Name>
+  <Name>scramble-cloud-cli-webdav</Name>
   <Repository>node:24-alpine</Repository>
   <Registry>https://hub.docker.com/_/node</Registry>
   <Network>bridge</Network>
