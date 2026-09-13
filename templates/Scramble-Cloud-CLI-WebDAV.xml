@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Scramble-Cloud-CLI-WebDAV</Name>
+  <Repository>node:24-alpine</Repository>
+  <Registry>https://hub.docker.com/_/node</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <MyMAC/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://docs.scramble.cloud/en/cli/</Support>
+  <Project>https://scramble.cloud/</Project>
+  <ReadMe/>
+  <Overview>Runs the official Scramble Cloud CLI and exposes its WebDAV server. The CLI is installed from npm each time the container is created or started. Login/session data is persisted in the mapped appdata directory.</Overview>
+  <Category>Cloud: Other: Tools:</Category>
+  <WebUI>http://[IP]:[PORT:1900]</WebUI>
+  <TemplateURL/>
+  <Icon>https://scramble.cloud/favicon.ico</Icon>
+  <ExtraParams>--init</ExtraParams>
+  <PostArgs>sh -c 'npm install -g @scramble-cloud/cli &amp;amp;&amp;amp; while true; do scramble-cli webdav --host 0.0.0.0 --port 1900 --username "${SCRAMBLE_WEBDAV_USERNAME:-admin}" ; echo "Scramble WebDAV stopped; retrying in 30 seconds. Use the container Console to run: scramble-cli login -u your@email.com"; sleep 30; done'</PostArgs>
+  <CPUset/>
+  <DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires>&#13;
+Before starting WebDAV for the first time, open the container Console and authenticate with:&#13;
+&#13;
+  scramble-cli login -u your@email.com&#13;
+&#13;
+The password and any 2FA code are entered interactively. Restart the container after login.&#13;
+&#13;
+Security: WebDAV is plain HTTP inside the Docker network unless you add the CLI's --https option. Do not expose port 1900 directly to the public Internet. Use a trusted LAN, VPN, or a properly secured reverse proxy.&#13;
+  </Requires>
+  <Config Name="WebDAV Port" Target="1900" Default="1900" Mode="tcp" Description="Host port used to access the Scramble WebDAV service." Type="Port" Display="always" Required="true" Mask="false">1900</Config>
+  <Config Name="Persistent Home / Configuration" Target="/root" Default="/mnt/user/appdata/scramble-cloud-cli" Mode="rw" Description="Persists the CLI login/session, settings, npm cache, and WebDAV password configuration." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/scramble</Config>
+  <Config Name="Local Data" Target="/data" Default="/mnt/user/scramble" Mode="rw" Description="Local folder available to the CLI for uploads and downloads." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/</Config>
+  <Config Name="WebDAV Username" Target="SCRAMBLE_WEBDAV_USERNAME" Default="admin" Mode="" Description="Username clients use to connect to the WebDAV server." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="WebDAV Password" Target="SCRAMBLE_WEBDAV_PASSWORD" Default="" Mode="" Description="Password clients use to connect to WebDAV. Choose a strong password." Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <TailscaleStateDir/>
+</Container>
