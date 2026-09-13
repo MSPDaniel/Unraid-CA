@@ -14,7 +14,7 @@ CREATE DATABASE IF NOT EXISTS plausible_events_db&#13;
 &#13;
 SHOW DATABASES</Overview>
   <WebUI>http://[IP]:[PORT:8123]/play</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/MSPDaniel/Unraid-CA/blob/main/templates/scramble.xml</TemplateURL>
+  <TemplateURL>https://raw.githubusercontent.com/MSPDaniel/Unraid-CA/blob/main/templates/clickhouse.xml</TemplateURL>
   <Icon>https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/clickhouse.png</Icon>
   <Config Name="Host Port" Target="8123" Default="8123" Mode="tcp" Description="HTTP Port" Type="Port" Display="always" Required="true" Mask="false">8123</Config>
   <Config Name="Data Path" Target="/var/lib/clickhouse" Default="/mnt/user/appdata/clickhouse" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/clickhouse</Config>
