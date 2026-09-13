@@ -1,7 +1,6 @@
 <CommunityApplications>
   <Profile>
-    Unraid Community Applications templates maintained by MSPDaniel.
-    Support and issue tracking are handled through the GitHub repository.
+    Unraid Community Applications templates maintained by MSPDaniel. Support and issue tracking are handled through the GitHub repository.
   </Profile>
   <Icon>https://raw.githubusercontent.com/MSPDaniel/Unraid-CA/main/icon.svg</Icon>
   <WebPage>https://github.com/MSPDaniel/Unraid-CA</WebPage>
