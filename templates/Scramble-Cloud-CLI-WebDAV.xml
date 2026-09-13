@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>Scramble-Cloud-CLI-WebDAV</Name>
+  <Name>scramble</Name>
   <Repository>node:24-alpine</Repository>
   <Registry>https://hub.docker.com/_/node</Registry>
   <Network>bridge</Network>
@@ -9,8 +9,8 @@
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support>https://docs.scramble.cloud/en/cli/</Support>
+  <TemplateURL>https://raw.githubusercontent.com/MSPDaniel/Unraid-CA/blob/main/templates/Scramble-Cloud-CLI-WebDAV.xml</TemplateURL>
   <Project>https://scramble.cloud/</Project>
-  <ReadMe/>
   <Overview>Runs the official Scramble Cloud CLI and exposes its WebDAV server. The CLI is installed from npm each time the container is created or started. Login/session data is persisted in the mapped appdata directory.</Overview>
   <Category>Cloud: Other: Tools:</Category>
   <WebUI>http://[IP]:[PORT:1900]</WebUI>
@@ -18,10 +18,6 @@
   <Icon>https://scramble.cloud/favicon.ico</Icon>
   <ExtraParams>--init</ExtraParams>
   <PostArgs>sh -c 'npm install -g @scramble-cloud/cli &amp;amp;&amp;amp; while true; do scramble-cli webdav --host 0.0.0.0 --port 1900 --username "${SCRAMBLE_WEBDAV_USERNAME:-admin}" ; echo "Scramble WebDAV stopped; retrying in 30 seconds. Use the container Console to run: scramble-cli login -u your@email.com"; sleep 30; done'</PostArgs>
-  <CPUset/>
-  <DateInstalled>
-  <DonateText/>
-  <DonateLink/>
   <Requires>&#13;
 Before starting WebDAV for the first time, open the container Console and authenticate with:&#13;
 &#13;
