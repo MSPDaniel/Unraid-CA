@@ -6,7 +6,7 @@
   <Network>bridge</Network>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Overview> If used with Plausible Analytics the [DB Name] should be created throuth terminal after the container starts using the following command: &#13;
+  <Overview> If used with Plausible Analytics the "plausible_events_db" should be created throuth terminal after the container starts using the following command: &#13;
 &#13;
 docker exec -it clickhouse clickhouse-client&#13;
 &#13;
@@ -14,7 +14,7 @@ CREATE DATABASE IF NOT EXISTS plausible_events_db&#13;
 &#13;
 SHOW DATABASES</Overview>
   <WebUI>http://[IP]:[PORT:8123]/play</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/MSPDaniel/Unraid-CA/blob/main/templates/clickhouse.xml</TemplateURL>
+  <TemplateURL>https://raw.githubusercontent.com/MSPDaniel/Unraid-CA/main/templates/scramble.xml</TemplateURL>
   <DonateText>Find my work useful? Donations are appreciated!</DonateText>
   <DonateLink>https://s.ariskin.cc/donate</DonateLink>
   <Icon>https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/clickhouse.png</Icon>
