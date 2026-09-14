@@ -1,7 +1,9 @@
 <CommunityApplications>
   <Profile>
-    Unraid Community Applications templates maintained by MSPDaniel. Support and issue tracking are handled through the GitHub repository.
+    Unraid Community Applications templates, maintained by MSPDaniel. Making templates for myself and the world.
   </Profile>
+  <DonateText>Find my work useful? Donations are appreciated!</DonateText>
+  <DonateLink>https://s.ariskin.cc/donate</DonateLink>
   <Icon>https://raw.githubusercontent.com/MSPDaniel/Unraid-CA/main/icon.svg</Icon>
   <WebPage>https://github.com/MSPDaniel/Unraid-CA</WebPage>
 </CommunityApplications>
