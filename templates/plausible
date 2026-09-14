@@ -17,6 +17,8 @@ DISABLE_REGISTRATION set to "true" after the admin user has registered.</Overvie
   <Category/>
   <WebUI>http://[IP]:[PORT:8000]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/MSPDaniel/Unraid-CA/blob/main/templates/plausible.xml</TemplateURL>
+  <DonateText>Find my work useful? Donations are appreciated!</DonateText>
+  <DonateLink>https://s.ariskin.cc/donate</DonateLink>
   <Icon>https://cdn.jsdelivr.net/gh/selfhst/icons/png/plausible.png</Icon>
   <Requires>Postgresql DB and Clickhouse DB.</Requires>
   <Config Name="WebUI" Target="8000" Default="" Mode="tcp" Description="WebUI" Type="Port" Display="always" Required="true" Mask="false">8000</Config>
