@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Amnezia-Web-UI</Name>
+  <Repository>stalker1211/amneziawg15-web-ui:latest</Repository>
+  <Registry>https://github.com/stalker1211/amneziawg15-web-ui?tab=readme-ov-file</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Overview>A comprehensive web-based management interface for AmneziaWG VPN servers. This service provides an easy-to-use web UI to create, 
+  manage, and monitor WireGuard VPN servers with AmneziaWG's advanced obfuscation features. AWG 1.5, AWG 2.0, AWG 3.0, and AWG 3.1 support.&#13;
+&#13;
+For each new VPN Server the Public UDP port needs to be maped in the template!</Overview>
+  <DonateText>Find my work useful? Donations are appreciated!</DonateText>
+  <DonateLink>https://s.ariskin.cc/donate</DonateLink>
+  <Category>Network:VPN</Category>
+  <WebUI>http://[IP]:9000</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/MSPDaniel/Unraid-CA/main/templates/Amnezia-Web-UI.xml</TemplateURL>
+  <Icon>https://avatars.githubusercontent.com/u/74861536?s=200&amp;amp;v=4</Icon>
+  <ExtraParams>--cap-add=NET_ADMIN --cap-add=SYS_MODULE --sysctl="net.ipv4.conf.all.src_valid_mark=1" --sysctl="net.ipv4.ip_forward=1"  --restart unless-stopped</ExtraParams>
+  <Config Name="NGINX_PORT" Target="NGINX_PORT" Default="9000" Mode="" Description="External port for web interface" Type="Variable" Display="always" Required="true" Mask="false">9000</Config>
+  <Config Name="NGINX_USER" Target="NGINX_USER" Default="DMaster" Mode="" Description="Username for basic auth in the app" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="NGINX_PASSWORD" Target="NGINX_PASSWORD" Default="" Mode="" Description="Password for basic auth in the app" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="TUN Device" Target="/dev/net/tun" Default="" Mode="" Description="Required for VPN functionality" Type="Device" Display="always" Required="true" Mask="false">/dev/net/tun</Config>
+  <Config Name="WebUI" Target="9000" Default="9000" Mode="tcp" Description="External port for web interface" Type="Port" Display="always" Required="true" Mask="false">9000</Config>
+  <Config Name="Data Dir" Target="/etc/amnezia" Default="" Mode="rw" Description="Path where WireGuard configuration files are stored inside the container." Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/amnezia-web-ui/</Config>
+  <Config Name="DEFAULT_PORT" Target="DEFAULT_PORT" Default="765" Mode="" Description="Default port for new servers. Effective only for api requests. For UI management set via UI." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Server1 - Public UDP Port" Target="765" Default="" Mode="udp" Description="Server1 - Public UDP Port" Type="Port" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Server2 - Public UDP Port" Target="766" Default="" Mode="udp" Description="" Type="Port" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Server3 - Public UDP Port" Target="767" Default="767" Mode="udp" Description="" Type="Port" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="AWG_LOG_LEVEL" Target="AWG_LOG_LEVEL" Default="debug|verbose|error|silent|off" Mode="" Description="Server &#x2192; View Logs in the UI" Type="Variable" Display="always" Required="false" Mask="false">off</Config>
+  <Config Name="Logs Path" Target="/var/log/amnezia/" Default="" Mode="rw" Description="Log file path (default: /var/log/amnezia/amneziawg-go.log)." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/amnezia-web-ui/logs</Config>
+  <TailscaleStateDir/>
+</Container>
