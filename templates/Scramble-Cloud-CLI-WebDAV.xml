@@ -10,6 +10,8 @@
   <Privileged>false</Privileged>
   <Support>https://docs.scramble.cloud/en/cli/</Support>
   <TemplateURL>https://raw.githubusercontent.com/MSPDaniel/Unraid-CA/blob/main/templates/Scramble-Cloud-CLI-WebDAV.xml</TemplateURL>
+  <DonateText>Find my work useful? Donations are appreciated!</DonateText>
+  <DonateLink>https://s.ariskin.cc/donate</DonateLink>
   <Project>https://scramble.cloud/</Project>
   <Overview>Runs the official Scramble Cloud CLI and exposes its WebDAV server. The CLI is installed from npm each time the container is created or started. Login/session data is persisted in the mapped appdata directory.</Overview>
   <Category>Cloud: Other: Tools:</Category>
