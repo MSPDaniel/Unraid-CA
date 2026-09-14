@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>clickhouse</Name>
+  <Name>ClickHouse</Name>
   <Repository>clickhouse/clickhouse-server:latest</Repository>
   <Registry>https://github.com/ClickHouse/ClickHouse</Registry>
   <Network>bridge</Network>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Overview>ClickHouse is a high-performance, open-source column-oriented database management system designed for fast analytics and real-time data processing.&#13;
-If used with Plausible Analytics the [Your DB Name] should be created throuth terminal after the container starts using the following command: &#13;
+If used with Plausible Analytics the [Your DB Name] should be created through the terminal after the container starts using the following command: &#13;
 &#13;
 docker exec -it clickhouse clickhouse-client&#13;
 &#13;
