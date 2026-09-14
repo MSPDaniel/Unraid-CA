@@ -1,12 +1,16 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>Plausible</Name>
+  <Name>Plausible Analytics</Name>
   <Repository>ghcr.io/plausible/community-edition:latest</Repository>
   <Registry>https://github.com/plausible/analytics/pkgs/container/community-edition</Registry>
   <Network>bridge</Network>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Overview>Instructions:&#13;
+  <Overview>Plausible Analytics is a lightweight, open-source, privacy-friendly
+alternative to Google Analytics.&#13;
+&#13;
+IMPORTANT FIRST-START INSTRUCTIONS:&#13;
+
 On a first container start paste the following string into Post Argurments to initialize all DBs:&#13;
 &#13;
 sh -c "sleep 10 &amp;amp;&amp;amp; /entrypoint.sh db migrate &amp;amp;&amp;amp; /entrypoint.sh db init-admin &amp;amp;&amp;amp; /entrypoint.sh start"&#13;
@@ -14,7 +18,7 @@ sh -c "sleep 10 &amp;amp;&amp;amp; /entrypoint.sh db migrate &amp;amp;&amp;amp; 
 Remove it after the first initialization.&#13;
 &#13;
 DISABLE_REGISTRATION set to "true" after the admin user has registered.</Overview>
-  <Category/>
+  <Category>Tools:Utilities Network:Web</Category>
   <WebUI>http://[IP]:[PORT:8000]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/MSPDaniel/Unraid-CA/main/templates/plausible.xml</TemplateURL>
   <DonateText>Find my work useful? Donations are appreciated!</DonateText>
