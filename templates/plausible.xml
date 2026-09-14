@@ -11,7 +11,7 @@ alternative to Google Analytics.&#13;
 &#13;
 IMPORTANT FIRST-START INSTRUCTIONS:&#13;
 
-On a first container start paste the following string into Post Argurments to initialize all DBs:&#13;
+On the first container start paste the following string into Post Arguments to initialize all DBs:&#13;
 &#13;
 sh -c "sleep 10 &amp;amp;&amp;amp; /entrypoint.sh db migrate &amp;amp;&amp;amp; /entrypoint.sh db init-admin &amp;amp;&amp;amp; /entrypoint.sh start"&#13;
 &#13;
@@ -24,7 +24,7 @@ DISABLE_REGISTRATION set to "true" after the admin user has registered.</Overvie
   <DonateText>Find my work useful? Donations are appreciated!</DonateText>
   <DonateLink>https://s.ariskin.cc/donate</DonateLink>
   <Icon>https://cdn.jsdelivr.net/gh/selfhst/icons/png/plausible.png</Icon>
-  <Requires>Postgresql DB and Clickhouse DB.</Requires>
+  <Requires>PostgreSQL and ClickHouse databases.</Requires>
   <Config Name="WebUI" Target="8000" Default="" Mode="tcp" Description="WebUI" Type="Port" Display="always" Required="true" Mask="false">8000</Config>
   <Config Name="BASE_URL" Target="BASE_URL" Default="" Mode="" Description="Enter valid https domain address." Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="SECRET_KEY_BASE" Target="SECRET_KEY_BASE" Default="" Mode="" Description="Use the following command in terminal to generate: openssl rand -base64 48" Type="Variable" Display="always" Required="true" Mask="false"></Config>
@@ -38,6 +38,6 @@ DISABLE_REGISTRATION set to "true" after the admin user has registered.</Overvie
   <Config Name="SMTP_USER_NAME" Target="SMTP_USER_NAME" Default="" Mode="" Description="The email provider's SMTP server login (usually your full email address)." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
   <Config Name="SMTP_USER_PWD" Target="SMTP_USER_PWD" Default="" Mode="" Description="The email provider's SMTP server password." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
   <Config Name="SMTP_HOST_SSL_ENABLED" Target="SMTP_HOST_SSL_ENABLED" Default="true|false" Mode="" Description="Plausible container initiates an implicit SSL connection for port 465 to work." Type="Variable" Display="advanced" Required="false" Mask="false">true</Config>
-  <Config Name="MAILER_NAME" Target="MAILER_NAME" Default="" Mode="" Description="Email's " Type="Variable" Display="advanced" Required="false" Mask="false">Plausible Analytics</Config>
+  <Config Name="MAILER_NAME" Target="MAILER_NAME" Default="" Mode="" Description="Email's FROM field." Type="Variable" Display="advanced" Required="false" Mask="false">Plausible Analytics</Config>
   <TailscaleStateDir/>
 </Container>
