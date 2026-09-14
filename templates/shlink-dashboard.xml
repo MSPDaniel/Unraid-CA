@@ -19,7 +19,7 @@ The default login and password "admin" could be changed only using HTTPS connect
   <Icon>https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/shlink.png</Icon>
   <DonateText>Find my work useful? Donations are appreciated!</DonateText>
   <DonateLink>https://s.ariskin.cc/donate</DonateLink>
-  <Requires>Postgres DB or Mysql DB or Maria DB or or Mssql DB</Requires>
+  <Requires>PostgreSQL, MySQL, MariaDB, or Microsoft SQL Server database.</Requires>
   <Config Name="SHLINK_DASHBOARD_DB_DRIVER" Target="SHLINK_DASHBOARD_DB_DRIVER" Default="postgres" Mode="" Description="Can be postgres, mysql, mariadb or mssql." Type="Variable" Display="always" Required="true" Mask="false">postgres</Config>
   <Config Name="SHLINK_DASHBOARD_DB_HOST" Target="SHLINK_DASHBOARD_DB_HOST" Default="192.168.2.22" Mode="" Description="The database server host name (your server IP)." Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="SHLINK_DASHBOARD_DB_PORT" Target="SHLINK_DASHBOARD_DB_PORT" Default="" Mode="" Description="The database server port." Type="Variable" Display="always" Required="true" Mask="false"></Config>
@@ -28,6 +28,5 @@ The default login and password "admin" could be changed only using HTTPS connect
   <Config Name="SHLINK_DASHBOARD_DB_NAME" Target="SHLINK_DASHBOARD_DB_NAME" Default="" Mode="" Description="Database name." Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="Web UI" Target="3005" Default="3005" Mode="tcp" Description="Web UI Port" Type="Port" Display="always" Required="true" Mask="false">3005</Config>
   <Config Name="SHLINK_DASHBOARD_SESSION_SECRETS" Target="SHLINK_DASHBOARD_SESSION_SECRETS" Default="" Mode="" Description="Use a long string of characters." Type="Variable" Display="always" Required="true" Mask="false"></Config>
-  <Config Name="TailScale Fallback State Directory" Target="CA_TS_FALLBACK_DIR" Default="/usr/share/nginx/html/servers.json" Mode="{3}" Description="Fallback container directory for tailscale state information - Added By Community Applications" Type="Variable" Display="advanced" Required="{7}" Mask="{8}">/usr/share/nginx/html/servers.json</Config>
   <TailscaleStateDir/>
 </Container>
