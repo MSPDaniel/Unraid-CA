@@ -9,7 +9,7 @@
   <Overview>A comprehensive web-based management interface for AmneziaWG VPN servers. This service provides an easy-to-use web UI to create, 
   manage, and monitor WireGuard VPN servers with AmneziaWG's advanced obfuscation features. AWG 1.5, AWG 2.0, AWG 3.0, and AWG 3.1 support.&#13;
 &#13;
-For each new VPN Server the Public UDP port needs to be maped in the template!</Overview>
+For each new VPN Server the Public UDP port needs to be mapped in the template!</Overview>
   <DonateText>Find my work useful? Donations are appreciated!</DonateText>
   <DonateLink>https://s.ariskin.cc/donate</DonateLink>
   <Category>Network:VPN</Category>
