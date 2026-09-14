@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>morss</Name>
+  <Repository>pictuga/morss</Repository>
+  <Registry>https://github.com/pictuga/morss</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Overview>morss is an open-source RSS tool that converts partial RSS feeds into full-text feeds by retrieving and extracting the content of linked articles.</Overview>
+  <DonateText>Find my work useful? Donations are appreciated!</DonateText>
+  <DonateLink>https://s.ariskin.cc/donate</DonateLink>
+  <Category>Network:Web</Category>
+  <WebUI>http://[IP]:8000</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/MSPDaniel/Unraid-CA/main/templates/morss.xml</TemplateURL>
+  <Icon>https://cdn-b.saashub.com/images/app/service_logos/146/yg0ol5yoc3m8/large.png?1589006440</Icon>
+  <Config Name="HTTP Port" Target="8000" Default="8000" Mode="tcp" Description="Web UI" Type="Port" Display="always" Required="true" Mask="false">8000</Config>
+  <Config Name="User Agent" Target="MORSS_UA" Default="Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com)" Mode="" Description="Set a custom User-Agent as a web browser instead of being identified as a Python script." Type="Variable" Display="always" Required="false" Mask="false">Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com)</Config>
+  <TailscaleStateDir/>
+</Container>
