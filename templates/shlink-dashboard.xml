@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>shlink-dashboard</Name>
+  <Name>Shlink Dashboard</Name>
   <Repository>shlinkio/shlink-dashboard:latest</Repository>
   <Registry>https://hub.docker.com/r/shlinkio/shlink-dashboard</Registry>
   <Network>bridge</Network>
@@ -13,7 +13,7 @@ The default login and password "admin" could be changed only using HTTPS connect
 1. Install shlink&#13;
 2. CLI to it and enter "shlink api-key:generate"&#13;
 3. Copy the api and add to server config in web UI.</Overview>
-  <Category>Tools:Utilities</Category>
+  <Category>Tools:Utilities Network:Web</Category>
   <WebUI>http://[IP]:[PORT:3005]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/MSPDaniel/Unraid-CA/main/templates/shlink-dashboard.xml</TemplateURL>
   <Icon>https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/shlink.png</Icon>
